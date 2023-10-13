@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+table td {
+  
+  border-collapse: collapse;
+  }
+  
+tr td{
+  text-align: left;
+}
+table thead{
+  width:10%;
+  min
+}

@@ -1,0 +1,11 @@
+
+
+table ,td{
+    border: 1px solid;
+    min-block-size: 10%;
+}
+
+
+table thead{
+    font-family: cursive;
+}
