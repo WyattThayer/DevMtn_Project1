@@ -4,16 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
-
 table td {
-  
   border-collapse: collapse;
-  }
-  
-tr td{
+}
+tr td {
   text-align: left;
 }
-table thead{
-  width:10%;
-  min
+table thead {
+  width: 10%;
 }

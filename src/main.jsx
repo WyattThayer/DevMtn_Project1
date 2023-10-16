@@ -7,7 +7,7 @@ import axios  from 'axios'
 axios.get('/events').then((response)=>{
   ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App initialData={response.data}/>
   </React.StrictMode>,)
 })
 

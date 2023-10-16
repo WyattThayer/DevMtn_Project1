@@ -3,10 +3,10 @@ import './App.css'
 import CalendarTable from './components/CalendarTable'
 
 
-function App() {
+function App({initialData}) {
   return(
     <>
-    <CalendarTable/>
+    <CalendarTable initialEventData={initialData}/>
     </>
   )
 }

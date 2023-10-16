@@ -13,7 +13,9 @@ import handlerFunctions from "./controller.js"
 
 //Routes
 app.get('/events', handlerFunctions.getEvent)
-
+app.post('/addEvent',handlerFunctions.addEvent)
+app.delete('/deleteEvent/:id',handlerFunctions.deleteEvent)
+app.put('/editEvent/:id',handlerFunctions.editEvent)
 
 
 
