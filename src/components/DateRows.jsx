@@ -5,26 +5,7 @@ import axios from "axios";
 const DateRows = ({ initialEventData }) => {
   const [currentData, setCurrentData] = useState(initialEventData);
 
- 
-  const events = currentData.map((event) => {
-    const {id} = currentData[0]
-    console.log(id)
-    return <AddEvent key={id} id={id} initialEvent={event} editMode={false} deleting={()=>deleteEvent(id)}/>;
-  });
-
-  const newEvent = async () => {
-    
-    const response = await axios.post("/addEvent", {
-      description: "Description here",
-      place: "Place",
-      time: "12:00",
-    });
-
-    setCurrentData([...currentData, response.data]);
-  };
-  
-
-  const deleteEvent = async (id) => {
+ const deleteEvent = async (id) => {
     const response = await axios.delete(`/deleteEvent/${id}`);
 
     if (!response.data.error) {
@@ -34,14 +15,34 @@ const DateRows = ({ initialEventData }) => {
       setCurrentData(filteredList);
     }
   };
+  
+    const newEvent = async () => {
+    
+    const response = await axios.post("/addEvent", {
+      description: "Description here",
+      place: "Place",
+      time: "12:00",
+    });
+
+    setCurrentData([...currentData, response.data]);
+  };
+  const events = currentData.map((event) => {
+    const {id} = event
+    return <AddEvent key={id} id={id} initialEvent={event} editMode={false} deleting={()=>deleteEvent(id)}/>;
+  });
+
+
+  
+
+  
 
   return (
-    <div>
       <tr>
-        {events}
-        <button onClick={newEvent}>Add New Event</button>
+        <td>
+          <button onClick={newEvent}>Add New Event</button>
+          {events}
+        </td>
       </tr>
-    </div>
   );
 };
 

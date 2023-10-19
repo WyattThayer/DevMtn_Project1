@@ -2,7 +2,7 @@ const DaysTableHeader = () =>{
 
     return(
         <tr>
-            <th>MONTH
+        
             <td>SUNDAY</td>
             <td>MONDAY</td>
             <td>TUESDAY</td>
@@ -10,7 +10,7 @@ const DaysTableHeader = () =>{
             <td>THURSDAY</td>
             <td>FRIDAY</td>
             <td>SATURDAY</td>
-            </th>
+        
         </tr>
     )
 }

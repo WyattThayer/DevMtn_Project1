@@ -46,15 +46,12 @@ const handlerFunctions = {
       
         const index = TestData.findIndex(event => event.id === +id);
       
-        if (index === -1) {
-          res.status(404).send('Event not found');
-        } else {
           const eventItem = TestData[index];
           eventItem.description = description;
           eventItem.place = place;
           eventItem.time = time;
         res.send(eventItem);
-     }
+     
     }
 }
 
